@@ -20,5 +20,8 @@
     "mongoose": "^6.9.2",
     "node-fetch": "^3.3.0",
     "nodemon": "^2.0.20"
+  },
+  "devDependencies": {
+    "grunt": "^1.6.1"
   }
 }
