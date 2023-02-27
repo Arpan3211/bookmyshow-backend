@@ -5,7 +5,7 @@ const cors = require("cors");
 const bodyParser = require("body-parser"); 
 
 // Defining the port number
-const port = process.env.PORT || 8080; 
+const PORT = process.env.PORT || 8080; 
 
 // Configuring the body-parser middleware to parse urlencoded data
 app.use(bodyParser.urlencoded({ extended: false })); 
@@ -21,6 +21,6 @@ connection();
 
 app.use("/api", require("./routes")); 
 
-app.listen(port, () => console.log(`App listening on port ${port}!`)); // Starting the server and logging a message to the console
+app.listen(PORT, () => console.log(`App listening on port ${PORT}!`)); // Starting the server and logging a message to the console
 
 module.exports = app;
