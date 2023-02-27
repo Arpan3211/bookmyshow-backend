@@ -5,7 +5,7 @@ const cors = require("cors");
 const bodyParser = require("body-parser"); 
 
 // Defining the port number
-const port = 8080; 
+const port = process.env.PORT || 8080; 
 
 // Configuring the body-parser middleware to parse urlencoded data
 app.use(bodyParser.urlencoded({ extended: false })); 
