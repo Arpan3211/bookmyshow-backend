@@ -3,6 +3,7 @@ const app = express();
 const { connection } = require("./connection.js"); 
 const cors = require("cors"); 
 const bodyParser = require("body-parser"); 
+const path = require('path');
 
 // Defining the port number
 const PORT = process.env.PORT || 8080; 
@@ -18,6 +19,11 @@ app.use(cors());
 
 // Calling the database connection function
 connection(); 
+
+app.use(express.static(path.join(__dirname,'./frontend/build')));
+app.get("*",function(req, res){
+    res.sendFile(path.join(__dirname , "./frontend/build/index.html"))
+})
 
 app.use("/api", require("./routes")); 
 
