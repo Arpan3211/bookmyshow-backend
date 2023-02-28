@@ -20,10 +20,10 @@ app.use(cors());
 // Calling the database connection function
 connection(); 
 
-app.use(express.static(path.join(__dirname+'./frontend/build')));
-app.get("*",function(req, res){
-    res.sendFile(path.join(__dirname + "./frontend/build/index.html"))
-})
+// app.use(express.static(path.join(__dirname+'./frontend/build')));
+// app.get("*",function(req, res){
+//     res.sendFile(path.join(__dirname + "./frontend/build/index.html"))
+// })
 
 app.use("/api", require("./routes")); 
 
