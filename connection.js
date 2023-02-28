@@ -18,6 +18,7 @@ const connectToMongo = async () => {
     .catch((err) => {
       // If there is an error during connection, log the error message
       console.log("error while connection", err);
+      
     });
 };
 
