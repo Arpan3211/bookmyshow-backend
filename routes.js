@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router(); 
-const Schema = require("./Schema"); 
+const Schema = require("./schema"); 
 const app = express();
 const cors = require("cors");
 const bodyParser = require("body-parser"); 
